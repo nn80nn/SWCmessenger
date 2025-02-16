@@ -8,7 +8,7 @@ public class SwCmessengerApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SwCmessengerApplication.class, args);
-        System.out.println("Hello world!");
+        System.out.println("Hello from Nikita!");
     }
 
 }
