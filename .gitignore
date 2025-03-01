@@ -18,6 +18,9 @@ target/
 *.iws
 *.iml
 *.ipr
+*.env
+src/main/resources/application.properties
+
 
 ### NetBeans ###
 /nbproject/private/
@@ -31,3 +34,16 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+# Логи
+logs/
+*.log
+
+# Файлы операционной системы
+.DS_Store
+Thumbs.db
+
+# Локальные конфигурации приложения
+application-local.properties
+application-local.yml
