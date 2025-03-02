@@ -13,7 +13,7 @@ import java.util.List;
 
 @Controller
 @RequiredArgsConstructor
-public class ChatController {
+public class ChatController {   // Пока тестовая версия не основываться будет переписано с нуля
 
     private final ChatMessageRepository repository;
 
