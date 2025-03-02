@@ -1,4 +1,4 @@
-package nvi.server.swcmessenger.authenticators;
+package nvi.server.swcmessenger.configuration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

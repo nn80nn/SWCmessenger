@@ -17,11 +17,9 @@ public class ChatController {   // Пока тестовая версия не �
 
     private final ChatMessageRepository repository;
 
-    @MessageMapping("/sendMessage")
+    @MessageMapping("/chat")
     @SendTo("/topic/messages")
-    public ChatMessage sendMessage(ChatMessage message, SimpMessageHeaderAccessor headerAccessor) {
-        message.setTimestamp(LocalDateTime.now());
-        repository.save(message);
+    public ChatMessage handleMessage(ChatMessage message) {
         return message;
     }
  
