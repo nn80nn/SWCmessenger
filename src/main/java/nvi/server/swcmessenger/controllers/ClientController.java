@@ -3,7 +3,7 @@ package nvi.server.swcmessenger.controllers;
 import lombok.RequiredArgsConstructor;
 import nvi.server.swcmessenger.databases.ClientRepository;
 import nvi.server.swcmessenger.models.Client;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -13,7 +13,7 @@ import java.util.Optional;
 public class ClientController {
 
     private final ClientRepository clientRepository;
-    private final BCryptPasswordEncoder passwordEncoder;
+//    private final BCryptPasswordEncoder passwordEncoder;
 
     /**
      * Проверяет существование клиента по email
@@ -36,18 +36,18 @@ public class ClientController {
      * @param password пароль пользователя в открытом виде
      * @return объект Client в случае успешной авторизации или null
      */
-    public Client authenticateClient(String email, String password) {
-        Optional<Client> clientOptional = clientRepository.findByEmail(email);
-
-        if (clientOptional.isPresent()) {
-            Client client = clientOptional.get();
-            if (passwordEncoder.matches(password, client.getPasswordHash())) {
-                return client;
-            }
-        }
-
-        return null;
-    }
+//    public Client authenticateClient(String email, String password) {
+//        Optional<Client> clientOptional = clientRepository.findByEmail(email);
+//
+//        if (clientOptional.isPresent()) {
+//            Client client = clientOptional.get();
+//            if (passwordEncoder.matches(password, client.getPasswordHash())) {
+//                return client;
+//            }
+//        }
+//
+//        return null;
+//    }
 
     /**
      * Создает нового клиента
@@ -66,7 +66,7 @@ public class ClientController {
      * @param password пароль в открытом виде
      * @return хеш пароля
      */
-    public String hashPassword(String password) {
-        return passwordEncoder.encode(password);
-    }
+//    public String hashPassword(String password) {
+//        return passwordEncoder.encode(password);
+//    }
 }
